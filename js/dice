@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var c = require('skilstak-colors');
+
+var one = c.random() + "-------\n" + "|       |\n" + "|   o   |\n" + "|       |\n" + "-------" + c.reset;
+var two = c.random() + `
+ -------
+| o     |
+|       |
+|     o | 
+ -------` + c.reset;
+var three = c.random() + "-------\n" + "| o     |\n" + "|   o   |\n" + "|     o |\n" + "-------" + c.reset;
+var four = c.random() + ` -------
+| o   o |
+|       |
+| o   o |
+ -------` + c.reset; 
+var five = c.random() + "-------\n" + "| o   o |\n" + "|   o   |\n" + "| o   o |\n" + "-------" + c.reset;
+var six = c.random() + `
+ -------
+| o   o |
+| o   o |
+| o   o |
+ -------
+` + c.reset;
+var sides = [one,two,three,four,five,six];
+
+
+function randInt(min,max) {
+  return Math.floor((Math.random() * (max - min + 1)) + min);
+  }
+
+  var total = 0; 
+
+  for (var i = 0; i < 5; i++) {
+    var somerand = randInt(1,6);
+    //console.log("Randomly Rolled: " + somerand);
+    console.log(sides[side].trim());
+    total += somerand;
+  }
+
+  console.log ("total: " + total);
